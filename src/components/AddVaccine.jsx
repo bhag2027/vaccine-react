@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import NavBar from './NavBar'
 
 const AddVaccine = () => {
 
@@ -45,7 +46,7 @@ const AddVaccine = () => {
       }
   return (
     <div>
-        
+        <NavBar/>
       <h1 align="center"><u>REGISTRATION</u></h1>
         <div className="container">
           <div className="row">
@@ -82,7 +83,7 @@ const AddVaccine = () => {
                 </div>
                 
                 <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                <label htmlFor="" className="form-label">District</label>
+                <label htmlFor="" className="form-label">Category</label>
                 <select  className="form-control"  name='category' value={data.category} onChange={inputHandler}>
                   <option value="Covaxin">Covaxin</option>
                   <option value="Covishield">Covishield</option>

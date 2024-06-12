@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import NavBar from './NavBar'
 
 const SearchVacc = () => {
     const [data, changeData] = useState(
@@ -15,7 +16,7 @@ const SearchVacc = () => {
     const [result, changeresult] = useState([ ])
 
 
-    // delete event handling
+   
     const deletecourse=(id)=>{
         let input={"_id": id }
         axios.post("http://localhost:8080/delete",input).then(
@@ -31,11 +32,11 @@ const SearchVacc = () => {
             }
         ).catch()
     }
-// input value fetching
+
     const inputHandler = (event) => {
         changeData({ ...data, [event.target.name]: event.target.value })
     }
-//  search button event
+
     const readValue = () => {
         console.log(data)
         axios.post("http://localhost:8080/search",data).then(
@@ -53,6 +54,7 @@ const SearchVacc = () => {
 
 
             </div>
+            <NavBar/>
             <div className="row">
                 <div className="col col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <div className="row g-3">

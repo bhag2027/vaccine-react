@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import NavBar from './NavBar'
 
 const ViewVaccine = () => {
 
@@ -16,6 +17,7 @@ const ViewVaccine = () => {
         useEffect(()=>{fetchData()},[])
   return (
     <div>
+        <NavBar/>
         <h1 align="center"><u>VIEW DETAILS</u></h1>
             <div className="container">
                 <div className="row">
